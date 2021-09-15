@@ -5,17 +5,17 @@ plugins {
 
 dependencies {
     implementation(project(":shared"))
-    implementation("com.google.android.material:material:1.3.0")
-    implementation("androidx.appcompat:appcompat:1.2.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.0.4")
+    implementation(Deps.material)
+    implementation(Deps.AndroidX.app_compat)
+    implementation(Deps.AndroidX.constraintLayout)
 }
 
 android {
-    compileSdkVersion(31)
+    compileSdk = Versions.compile_sdk
     defaultConfig {
         applicationId = "com.billyluisneedham.testkmm3.android"
-        minSdkVersion(26)
-        targetSdkVersion(31)
+        minSdk = Versions.min_sdk
+        targetSdk = Versions.target_sdk
         versionCode = 1
         versionName = "1.0"
     }
